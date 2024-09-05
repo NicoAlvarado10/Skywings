@@ -1,0 +1,248 @@
+/*ESTILOS DE COMPONENTES*/
+
+/*ARTICLE-COMPONENTE*/
+
+.card__description{
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+    gap: 1rem;
+}
+
+
+.about__card{
+    border-radius: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 0 6px 0 rgba(0,0,0,0.2) ;
+}
+.card__img{
+    border-top-left-radius: 2rem;
+    transition: 0.3s;
+    border-top-right-radius: 2rem;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.2);
+}
+
+.card__title{
+    color: var(--text-dark);   
+    font-size: 1.3rem;
+}
+.card__pais{
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+.card__rating{
+    padding: 8px;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    color: var(--white);
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+    margin-right: 1rem;
+}
+.description__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+@media (max-width:650px ){
+    .about__card{
+        border-radius: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 0 6px 0 rgba(0,0,0,0.2) ;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+/*TourCard-COMPONENTE*/
+
+.tour__card{
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem ;
+    background-color: var(--extra-light);
+    height: 200px;
+    position: relative;
+    color: var(--primary-color);
+    transition: all 0.5s;
+    
+}
+.tour__bg{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding: 1rem;
+}
+.card__title{
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+.card__content{
+    height: 200px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 1rem;
+    padding-top: 2rem;
+    position: relative;
+    display: none;
+}
+
+.content__title{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    
+}
+.content__paragraph{
+    line-height: 1.5;
+}
+span{
+    font-size: 1.8rem;
+}
+.tour__card:hover .card__content{
+    display: block;
+    position: absolute;
+    height: 250px;
+    bottom:1%;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+
+
+
+
+/*ServicesCard-COMPONENTE*/
+
+.services__card{
+    text-align: center;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+}
+.services__card:hover{
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+.services__card h3{
+    color: var(--text-dark);
+    margin: 10px 0;
+}
+
+
+.services__card span{
+    padding: 7px 15px;
+    border-radius: 50%;
+    color: var(--primary-color);
+    background-color: var(--extra-light);
+}
+
+
+/*Carrusel-COMPONENTE*/
+
+.carousel_item {
+    min-width:500px; /* O el tamaño que desees */
+    display: flex;
+    flex-direction: column;
+    height:300px ;
+    
+    cursor: pointer;
+}
+.carousel__star{
+    color: var(--primary-color);
+    display: flex;
+    gap: 5px;
+    padding: 1rem;
+    border-left: 5px solid var(--extra-light);
+    border-right: 5px solid var(--extra-light);
+    border-top: 5px solid var(--extra-light);
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+.carousel__star i{
+    font-size: 25px;
+}
+.carousel__img{
+    width: 15%;
+    border-radius: 50%;
+}
+.carousel__descp{
+    background-color: var(--extra-light);
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    justify-content: left;
+    gap: 1rem;
+    align-items: center;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+.carousel__paragraph{
+    padding: 1rem;
+    border-left: 5px solid var(--extra-light);
+    border-right: 5px solid var(--extra-light);
+    line-height: 1.5;
+  }
+.carousel__nombre{
+    font-size: 1.1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.carousel__nombre span{
+    font-size: 1rem;
+    color: var(--text-light);
+}
+
+.carousel_item:hover .carousel__paragraph{
+    border: 5px solid var(--primary-color);
+    border-top: none;
+    border-bottom: none;
+    transition: all 0.3s;
+}
+.carousel_item:hover .carousel__star{
+    border-left: 5px solid var(--primary-color);
+    border-right: 5px solid var(--primary-color);
+    border-top: 5px solid var(--primary-color);
+    transition: all 0.3s;
+}
+.carousel_item:hover .carousel__descp{
+    background-color: var(--primary-color);
+    color: var(--white);
+    transition: all 0.3s;
+}
+.carousel_item:hover .carousel__nombre {
+    color: var(--white);
+    transition: all 0.3s;
+}
+.carousel_item:hover .carousel__nombre span{
+    color: var(--white);
+    transition: all 0.3s;
+}
+
+@media (max-width:768px ){
+    .carousel_item {
+        min-width:90%; /* O el tamaño que desees */
+        height:200px ;
+        
+    }
+}
+
+
+
+

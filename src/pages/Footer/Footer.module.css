@@ -1,0 +1,115 @@
+.footer{
+    height: 50%;
+    background-color: var(--extra-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 4rem;
+    gap: 5rem;
+  
+}
+.footer__grid{
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+.copyright{
+    padding-bottom: 1rem;
+}
+.footer__title{
+    color: var(--text-dark);
+    font-weight: 600;
+    text-align: left;
+}
+.footer h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.footer__paragraph{
+    line-height: 1.5;
+    color: var(--text-light);
+    font-size: 1.1rem;
+}
+.footer__card{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+}
+.footer__nav a{
+    color: var(--text-light);
+    transition: all 0.3s;
+}
+ .footer__nav a:hover{
+    color: var(--primary-color);
+}
+.footer__nav{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+   
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer__button{
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.9rem;
+    border-radius: 7px;
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.footer__button:hover{
+    background-color: var(--primary-color-dark);
+}
+form input{
+    padding: 0.9rem;
+    border: 1px solid #282727;
+    border-radius: 7px;
+}
+.footer__redes{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer__redes a{
+    padding: 7px 10px;
+    font-size: 1.25rem;
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-radius: 100%;
+}
+.footer__redes a:hover{
+    background-color: var(--primary-color-dark);
+}
+@media (max-width:1200px ){
+    .footer__grid{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:800px ){
+    .footer__grid{
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media (max-width:540px ){
+    .footer__grid{
+        width: 90%;
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+    }
+}
