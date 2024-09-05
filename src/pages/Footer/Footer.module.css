@@ -81,7 +81,11 @@ form input{
     display: flex;
     gap: 1rem;
 }
-
+.copyright{
+    text-align: center;
+    display: flex;
+    margin: 0 auto;
+}
 .footer__redes a{
     padding: 7px 10px;
     font-size: 1.25rem;
