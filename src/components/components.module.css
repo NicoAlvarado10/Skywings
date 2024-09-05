@@ -46,6 +46,9 @@
     margin-top: 5px;
     margin-right: 1rem;
 }
+.card__rating span{
+    font-size: 1.1rem;
+}
 .description__content{
     display: flex;
     align-items: center;
