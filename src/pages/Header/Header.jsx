@@ -1,6 +1,8 @@
 import {HamburgerBtn} from './../../components/hamburgerBtn/HamburgerBtn';
 import styles from './Header.module.css'
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
+
 export const Header = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,19 +43,43 @@ return (
         
     </nav>
     <section className={styles.header__hero}>
-        <div className={styles.hero__texts}>
-            <p className={styles.header__subtitle}>ELEVATE YOUR TRAVEL JOURNEY</p>
-            <h1 className={styles.header__title}>Experience <br /> The Magic Of <br />Flight!</h1>
-            <div className={styles.hero__action}>
-                <a href="#" className={styles.header__btn}>Book A Trip Now</a>
-
-                <a className={styles.btn__secondary} href="#"><i className="ri-play-fill"></i></a>
-            </div>
-
-        </div>
-        <div className={styles.hero__img}>
-            <img src="/header.png" alt="image-avion" className={styles.img_avion} />
-        </div>
+    <div className={styles.hero__texts}>
+                    <motion.p
+                        className={styles.header__subtitle}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 0.5 }}
+                    >
+                        ELEVATE YOUR TRAVEL JOURNEY
+                    </motion.p>
+                    <motion.h1
+                        className={styles.header__title}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 1  }}
+                    >
+                        Experience <br /> The Magic Of <br />Flight!
+                    </motion.h1>
+                    <motion.div
+                        className={styles.hero__action}
+                        initial={{ opacity: 0, y: 50 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: 1.5 }}
+                    >
+                        <a href="#" className={styles.header__btn}>Book A Trip Now</a>
+                        <a className={styles.btn__secondary} href="#"><i className="ri-play-fill"></i></a>
+                    </motion.div>
+                </div>
+                <motion.div
+                    className={styles.hero__img}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1, delay: 1  }}
+                    
+                    
+                >
+                    <img src="/header.png" alt="image-avion" className={styles.img_avion} />
+                </motion.div>
     </section>
 </header>
 

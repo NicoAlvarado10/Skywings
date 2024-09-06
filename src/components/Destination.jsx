@@ -3,7 +3,10 @@ import styles from './components.module.css';
 export const Destination = ({imageSrc, title, paisCiudad, rating}) => {
 
 return (
-<article className={styles.about__card}>
+<article 
+  className={styles.about__card}
+
+  >
   <img src={imageSrc} alt="image-lugar" className={styles.card__img} />
   <div className={styles.description__content}>
     <div className={styles.card__description}>
